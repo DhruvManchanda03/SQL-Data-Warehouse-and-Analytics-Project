@@ -10,7 +10,7 @@ CREATE TABLE bronze.crm_cust_info(
 	cst_lastname VARCHAR(50),
 	cst_marital_status VARCHAR(50),
 	cst_gndr VARCHAR(50),
-	cst_create_date DATE
+	cst_create_date DATETIME
 );
 
 
@@ -21,8 +21,8 @@ CREATE TABLE bronze.crm_prd_info(
 	prd_nm	VARCHAR(50),
 	prd_cost INT ,
 	prd_line VARCHAR(50),
-	prd_start_dt DATE,
-	prd_end_dt DATE
+	prd_start_dt DATETIME,
+	prd_end_dt DATETIME
 );
 
 DROP TABLE IF EXISTS bronze.crm_sales_details ;
@@ -42,7 +42,7 @@ CREATE TABLE bronze.crm_sales_details(
 DROP TABLE IF EXISTS bronze.erp_cust_az12;
 CREATE TABLE bronze.erp_cust_az12(
 	cid	VARCHAR(50),
-	bdate DATE,
+	bdate DATETIME,
 	gen VARCHAR(50)
 );
 
