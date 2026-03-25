@@ -52,7 +52,8 @@ ROW_NUMBER() OVER(ORDER BY prd_start_dt, prd_key) AS product_key,-- SURROGATE KE
 		pi.prd_end_dt AS end_date
 FROM silver.crm_prd_info pi
 	LEFT JOIN silver.erp_px_cat_g1v2 pc
-	ON pi.prd_cat_id=pc.id;
+	ON pi.prd_cat_id=pc.id
+    WHERE pi.prd_end_dt IS NULL;
 
 
 
