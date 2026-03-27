@@ -60,7 +60,7 @@ INSERT INTO silver.crm_prd_info(
 SELECT
 	prd_id,
 	REPLACE(SUBSTR(prd_key,1,5),'-','_') AS prd_cat_id,
-	SUBSTR(prd_key,7,LENGTH(prd_key)) AS prd_key,
+	TRIM(REPLACE(REPLACE(REPLACE(SUBSTR(prd_key,7,LENGTH(prd_key)), '\r',''),'\n',''),'\t','')) AS prd_key,
 	TRIM(REPLACE(REPLACE(REPLACE(prd_nm, '\r',''), '\n',''), '\t','')) AS prd_nm,
 	CASE 
 		WHEN prd_cost < 0 OR prd_cost IS NULL THEN 0
