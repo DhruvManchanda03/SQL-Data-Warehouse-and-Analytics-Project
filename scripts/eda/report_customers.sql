@@ -14,7 +14,7 @@
 DROP VIEW IF EXISTS gold.report_customers;
 CREATE VIEW gold.report_customers AS
 
-with cte_lifespan_sum as(
+with cte_customers_details as(
 		select fs.customer_key,customer_id ,timestampdiff(month,MIN(order_date),MAX(order_date)) as lifespan ,
 		sum(sales) as total_sales,
 		sum(quantity) as total_quantity,
@@ -59,5 +59,5 @@ select
 		timestampdiff(month,latest_order,now()) as recency
 		from
 gold.dim_customers dc 
-left join cte_lifespan_sum cls
+left join cte_customers_details cls
 on dc.customer_key=cls.customer_key 
