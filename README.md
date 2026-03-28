@@ -103,20 +103,23 @@ The Gold layer provides **analytics-ready datasets** using a **star schema desig
 
 ## 📊 Analytics Performed
 
-Using the Gold layer, several business insights were derived:
+Using the Gold layer, the following insights were derived:
 
-### 🔹 Sales Analysis
+### 🔹 Customer Report (`gold.report_customers`)
+* Customer segmentation (VIP, Regular, New) and age groups  
+* Metrics: total orders, sales, quantity, products, lifespan  
+* KPIs: recency, average order value, average monthly spend  
 
-* Total sales by country
-* Revenue distribution across product categories
-* Top-performing products
+### 🔹 Product Report (`gold.report_products`)
+* Product segmentation (High, Mid, Low performance)  
+* Metrics: total orders, sales, quantity, customers, lifespan  
+* KPIs: recency, average order revenue, average monthly revenue, average selling price  
 
-### 🔹 Customer Insights
-
-* Customer segmentation (e.g., single vs married)
-* Number of unique customers purchasing specific product lines
-* Age-based analysis
-
+### 🔹 Sales & Order Insights
+* Total sales by country and category  
+* Top-performing products  
+* Order trends and average order value
+  
 ### 🔹 Order Insights
 
 * Total number of orders per country
