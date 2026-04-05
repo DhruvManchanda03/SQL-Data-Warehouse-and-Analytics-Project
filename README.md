@@ -1,4 +1,4 @@
-# 📊 SQL Data Warehouse & Analytics Project
+# 📊 SQL Data Warehouse , Analytics & Visualization Project
 
 ## 🚀 Overview
 End-to-end SQL data warehouse project using **Medallion Architecture (Bronze → Silver → Gold)** with **Power BI dashboard** for analytics and visualization.
